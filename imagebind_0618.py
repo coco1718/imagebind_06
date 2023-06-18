@@ -60,7 +60,7 @@ model.to(device)
 torch.cuda.empty_cache()
 
 inputs = {
-    ModalityType.TEXT: data.load_and_transform_text(text_list, device, batch_size=32), # batch_size=16 포함
+    ModalityType.TEXT: data.load_and_transform_text(text_list, device, batch_size=32),
     ModalityType.VISION: data.load_and_transform_vision_data(image_paths, device, batch_size=32),
     ModalityType.AUDIO: data.load_and_transform_audio_data(audio_paths, device, batch_size=32),
 }
